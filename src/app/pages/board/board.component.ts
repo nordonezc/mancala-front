@@ -27,7 +27,7 @@ export class BoardComponent implements OnInit {
   mancala2: number = 0;
   idGame!: string;
   playerTurn: number = 0;
-  winner: number = 1;
+  winner: number = 0;
   idBoard: string = '';
 
   constructor(

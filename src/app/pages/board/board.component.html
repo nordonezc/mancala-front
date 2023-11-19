@@ -2,8 +2,17 @@
   <div class="d-grid gap-2">
     <bol-button label="Back" (clickEvent)="back()"></bol-button>
     <bol-button label="New Game" (clickEvent)="createBoard()"></bol-button>
-    <p class="game-info" [ngClass]="playerTurn === 1 ? 'player1' : 'player2'">
-      Turn: Player {{ playerTurn }}
+    <p
+      class="game-info"
+      [ngClass]="
+        (playerTurn === 1 && winner === 0) || winner === 1
+          ? 'player1'
+          : 'player2'
+      "
+    >
+      @if(winner === 0){ Turn: Player {{ playerTurn }} } @else{ WINNER IS PLAYER
+      {{ winner }}
+      }
     </p>
   </div>
 </div>
