@@ -1,0 +1,86 @@
+div {
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 1em;
+  margin: 1rem auto;
+}
+
+td {
+  padding: 1rem 1.2rem;
+  border-radius: 50px;
+  box-shadow: #000000 4px 4px 0 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid #000000;
+}
+
+.game-info {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+}
+
+.player1 {
+  background-color: #e73131;
+}
+
+.player2 {
+  background-color: #4f5bff;
+}
+
+td:hover {
+  background-color: #fff;
+}
+
+td:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (max-width: 425px) {
+  table {
+    transform: rotate(90deg);
+    display: block;
+    margin-top: 120px;
+  }
+
+  td {
+    transform: rotate(-90deg);
+  }
+
+  td:hover {
+    background-color: #fff;
+    transform: rotate(-90deg);
+  }
+
+  .mancala {
+    transform: rotate(-90deg);
+    min-width: 120px;
+    max-height: 60px;
+    line-height: 25px;
+  }
+
+  .d-grid {
+    display: flex !important;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}

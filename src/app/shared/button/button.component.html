@@ -1,0 +1,9 @@
+@if(inputType==='button'){
+<button class="button-main" (click)="handleClick()" type="button">
+  {{ label }}
+</button>
+} @if(inputType==='submit'){
+<button class="button-main" type="submit">
+  {{ label }}
+</button>
+}

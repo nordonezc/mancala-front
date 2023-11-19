@@ -1,0 +1,13 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div>
+    <input
+      id="idGame"
+      type="text"
+      formControlName="idGame"
+      placeholder="Game ID"
+      class="retro-input"
+    />
+  </div>
+
+  <bol-button label="Search" inputType="submit"></bol-button>
+</form>

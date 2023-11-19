@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center align-items-center vh-50">
+  <div class="d-grid gap-2">
+    <bol-button label="Back" (clickEvent)="back()"></bol-button>
+    <bol-button label="New Game" (clickEvent)="createBoard()"></bol-button>
+    <p class="game-info" [ngClass]="playerTurn === 1 ? 'player1' : 'player2'">
+      Turn: Player {{ playerTurn }}
+    </p>
+  </div>
+</div>
+
+<table>
+  <tr>
+    <td rowspan="2" class="mancala player1">{{ mancala1 }}</td>
+    @for (item of items; track $index) {
+    <td
+      (click)="playerTurn === 1 && selectPosition(items.length - $index - 1)"
+      class="player1"
+      [ngClass]="{ disabled: item === 0 }"
+    >
+      {{ item }}
+    </td>
+    } @empty {
+    <div>No board set</div>
+    }
+    <td rowspan="2" class="mancala player2">{{ mancala2 }}</td>
+  </tr>
+
+  <tr>
+    @for (item of items2; track $index) {
+    <td
+      (click)="playerTurn === 2 && selectPosition($index)"
+      class="player2"
+      [ngClass]="{ disabled: item === 0 }"
+    >
+      {{ item }}
+    </td>
+    } @empty {
+    <div>No board set</div>
+    }
+  </tr>
+</table>

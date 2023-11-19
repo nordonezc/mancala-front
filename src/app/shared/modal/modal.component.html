@@ -1,0 +1,12 @@
+<a [href]="'#' + label" class="button-main">{{ label }}</a>
+<div [id]="label" class="modalmask">
+  <div class="modalbox movedown">
+    <a href="#close" title="Close" class="close">X</a>
+    <ng-content></ng-content>
+    <h2>{{ title }}</h2>
+    <p>
+      {{ description }}
+    </p>
+    <ng-content></ng-content>
+  </div>
+</div>
